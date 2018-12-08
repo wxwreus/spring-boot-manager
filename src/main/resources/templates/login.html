@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <style>
+        .canvas{
+            position: absolute;
+            border: 1px solid gray;
+            left: 50%;
+            width: 600px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="canvas" class="canvas">
+</div>
+
+<div id="print">
+</div>
+<button>打印</button>
+<script th:src="@{~/static/js/jquery-1.9.1.js}" src="../static/js/jquery-1.9.1.js"></script>
+<script th:src="@{~/static/qrcode/jquery-qrcode.js}" src="../static/qrcode/jquery-qrcode.js"></script>
+<script th:src="@{~/static/qrcode/jQuery.print.js}" src="../static/qrcode/jQuery.print.js"></script>
+<script th:src="@{~/static/qrcode/html2canvas.js}" src="../static/qrcode/html2canvas.js"></script>
+<script th:src="@{~/static/index.js(v=88888888)}" src="../static/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cybertech.mapper.TestMapper" >
+
+    <resultMap type="com.cybertech.entity.Vehicle" id="TPublicOrganizationDtolist">
+        <result property="hphm" column="hphm"/>
+        <result property="hpzl" column="hpzl"/>
+        <!--一对多查询（左外关联==左关联）-->
+        <collection property="list" ofType="com.cybertech.entity.Relation">
+            <result column="hphm" property="hphm"/>
+            <result column="mjjh" property="mjjh"/>
+            <result column="mjxm" property="mjxm"/>
+        </collection>
+    </resultMap>
+    <select id="testOneToMany" resultMap="TPublicOrganizationDtolist">
+        select * from vehicle v left JOIN relation r on v.hphm=r.hphm
+    </select>
+
+    <select id="loadUserInfo" resultType="com.cybertech.entity.UserInfo">
+        select * from user_info t
+    </select>
+</mapper>

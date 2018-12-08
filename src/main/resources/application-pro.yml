@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/jj?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    dbcp2:
+      initial-size: 8
+      min-idle: 6
+      max-idle: 50
+
+server:
+  port: 8081
+mybatis:
+  mapper-locations: classpath:mapper/mybatis/*.xml
+  type-aliases-package: com.cybertech.entity
+  config-location: classpath:mapper/mybatis-config.xml
+logging:
+  config: classpath:logback.xml
+  level:
+    com:
+      cybertech:
+        web:
+          mapper: debug

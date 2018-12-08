@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@127.0.0.1:1521:qw
+    username: qwgl
+    password: cyber
+    driverClassName: oracle.jdbc.OracleDriver
+    dbcp2:
+      initial-size: 8
+      min-idle: 6
+      max-idle: 50
+server:
+  port: 8081
+
