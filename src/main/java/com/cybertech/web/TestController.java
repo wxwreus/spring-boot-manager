@@ -58,6 +58,7 @@ public class TestController {
 	@ResponseBody
 	public Object loadUserInfo(){
 
+		System.out.println("kkk");
 		List<UserInfo> list = testServiceImpl.loadUserInfo();
 		return list;
 	}
