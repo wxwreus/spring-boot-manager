@@ -1,5 +1,6 @@
 package com.cybertech.web;
 
+import com.cybertech.common.annotation.LoginRequired;
 import com.cybertech.entity.UserInfo;
 import com.cybertech.entity.Vehicle;
 import com.cybertech.service.TestService;
@@ -56,6 +57,7 @@ public class TestController {
 
 	@RequestMapping("/loadUserInfo")
 	@ResponseBody
+	@LoginRequired
 	public Object loadUserInfo(){
 
 		System.out.println("kkk");

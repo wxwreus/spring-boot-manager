@@ -54,6 +54,7 @@ public class MyBatisConfig {
 	}
 
 	private DataSource dataSource() {
+
 		Map<String, Object> properties = new HashMap<>();
 		properties.put(DruidDataSourceFactory.PROP_DRIVERCLASSNAME, driverClassName);
 		properties.put(DruidDataSourceFactory.PROP_URL, dbUrl);

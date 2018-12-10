@@ -12,5 +12,6 @@ public class Constant {
     public final static Integer PARAM_ERROR = 1001;
     public final static Integer INTERNAL_SERVER_ERROR = 1002;
     public final static Integer DEL_ERROR = 1003;
+    public final static String NO_INTERCEPTOR_PATH = ".*/((.css)|(.js)|(images)|(login)|(anon)).*";
 
 }
