@@ -26,10 +26,10 @@ public class TestController {
 	@RequestMapping("/testOneToMany")
 	@ResponseBody
 	public Object testOneToMany(){
+
 		List<Vehicle> list = testServiceImpl.testOneToMany();
 		return list;
 	}
-
 
 	@RequestMapping("/testListRemove")
 	@ResponseBody
@@ -40,8 +40,6 @@ public class TestController {
 		vehicleList.add(v);
 		Iterator<Vehicle> it = vehicleList.iterator();
 		while (it.hasNext()){
-
-//			Vehicle v = it.next();
 			it.remove();
 		}
 		return vehicleList;
@@ -49,18 +47,14 @@ public class TestController {
 	@RequestMapping("/login")
 	public String testThymeleaf(){
 
-//		Set<String> set = new SortedSet<String>();
-		System.out.println("====login====");
 		return "login";
 	}
-
 
 	@RequestMapping("/loadUserInfo")
 	@ResponseBody
 	@LoginRequired
 	public Object loadUserInfo(){
 
-		System.out.println("kkk");
 		List<UserInfo> list = testServiceImpl.loadUserInfo();
 		return list;
 	}
