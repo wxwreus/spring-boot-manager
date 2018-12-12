@@ -3,6 +3,7 @@ package com.cybertech.service.impl;
 import com.cybertech.entity.UserInfo;
 import com.cybertech.entity.Vehicle;
 import com.cybertech.mapper.TestMapper;
+import com.cybertech.redis.RedisUtil;
 import com.cybertech.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,9 @@ public class TestServiceImpl implements TestService {
 
 	@Autowired
 	TestMapper testMapper;
+
+	@Autowired
+	RedisUtil redisUtil;
 
 	@Override
 	public List<Vehicle> testOneToMany() {
@@ -39,6 +43,7 @@ public class TestServiceImpl implements TestService {
 		List<UserInfo> userInfoList = null;
 		try{
 			userInfoList = testMapper.loadUserInfo();
+			redisUtil.set("zw","sb");
 		}catch(Exception e){
 			e.printStackTrace();
 		}

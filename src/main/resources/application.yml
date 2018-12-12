@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: pro
+    active: pro,redis
   resources:
     static-locations: ["/templates/","/static/"]
   thymeleaf:
